@@ -1,18 +1,18 @@
 {
-  "name": "sistema-reserva-vagas",
+  "name": "reserva_de_vagas_rpc",
   "version": "1.0.0",
-  "description": "Sistema simples de reserva de vagas para demonstrar comunicacao cliente-servidor e API REST.",
-  "main": "src/server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "node src/server.js"
+    "start": "node server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "node",
-    "rest",
-    "reservas",
-    "programacao-concorrente-distribuida"
-  ],
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3"
+  }
 }

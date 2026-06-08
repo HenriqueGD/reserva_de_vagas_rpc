@@ -1,53 +1,68 @@
 # Sistema de Reserva de Vagas
 
-Projeto simples para a disciplina de Programacao Concorrente e Distribuida.
+Projeto desenvolvido para a disciplina de Programação Concorrente e Distribuída.
 
-O tema escolhido e um sistema web de reserva de vagas. Nesta primeira versao, o sistema demonstra a estrutura inicial do projeto e uma API REST com cadastro e consulta de reservas.
+O sistema permite que usuários realizem reservas de vagas por meio de uma interface web. As reservas são enviadas para um servidor Node.js, armazenadas temporariamente em memória e processadas por uma fila interna.
 
-## Tecnologias
+Após o processamento, os clientes conectados recebem atualizações em tempo real na página, sem necessidade de recarregamento.
 
-- HTML
-- CSS
-- JavaScript
-- Node.js
-- API REST com `GET` e `POST`
+## Tecnologias Utilizadas
 
-Nas proximas entregas, o projeto pode evoluir com fila de processamento, Socket.IO, gRPC e controle de concorrencia com mutex ou semaforo.
+* HTML
+* CSS
+* JavaScript
+* Node.js
+* Express
+* Socket.IO
 
-## Como executar
+## Funcionalidades
 
-No terminal, dentro da pasta do projeto:
+* Cadastro de reservas.
+* Consulta de reservas cadastradas.
+* Comunicação entre cliente e servidor utilizando API REST.
+* Processamento assíncrono através de fila interna.
+* Atualização em tempo real utilizando Socket.IO.
+* Armazenamento temporário dos dados em memória.
+
+## Como Executar
+
+Instale as dependências:
 
 ```bash
-npm start
+npm install
 ```
 
-Depois acesse:
+Execute o servidor:
+
+```bash
+node server/app.js
+```
+
+Acesse no navegador:
 
 ```text
 http://localhost:3000
 ```
 
-## Endpoints da API
+## Endpoints
 
-### GET /mensagens
+### GET /reservas
 
-Consulta todas as reservas cadastradas temporariamente em memoria.
+Retorna todas as reservas cadastradas.
 
-### POST /mensagens
+### POST /reservas
 
-Cadastra uma nova reserva.
+Cria uma nova reserva.
 
-Exemplo de JSON:
+Exemplo:
 
 ```json
 {
-  "nome": "Henrique",
-  "vaga": "Vaga A01",
-  "mensagem": "Solicito reserva para o periodo da manha."
+  "nome": "Isabel",
+  "vaga": "1"
 }
 ```
 
-## Observacao
+## Observação
 
-Os dados ficam salvos apenas enquanto o servidor esta rodando. Ao reiniciar o servidor, as reservas voltam ao estado inicial.
+Os dados são armazenados apenas em memória enquanto o servidor estiver em execução. Ao reiniciar a aplicação, as informações cadastradas são removidas.

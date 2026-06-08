@@ -1,59 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistema de Reserva de Vagas</title>
-    <link rel="stylesheet" href="/styles.css" />
-  </head>
-  <body>
-    <main class="app">
-      <section class="hero">
-        <div>
-          <h1>Sistema de Reserva de Vagas</h1>
-          <p>
-            Projeto para cadastrar e consultar reservas usando
-            comunicacao cliente-servidor e API REST.
-          </p>
-        </div>
-        <div class="status" id="status">Conectando ao servidor...</div>
-      </section>
+<html>
 
-      <section class="layout">
-        <form class="panel" id="form-reserva">
-          <h2>Cadastrar reserva</h2>
+<head>
 
-          <label for="nome">Nome</label>
-          <input id="nome" name="nome" placeholder="Ex.: Henrique" required />
+    <title>
+        Reserva de Estacionamento
+    </title>
 
-          <label for="vaga">Vaga</label>
-          <input id="vaga" name="vaga" placeholder="Ex.: Vaga A01" required />
+    <link rel="stylesheet" href="style.css">
 
-          <label for="mensagem">Mensagem</label>
-          <textarea
-            id="mensagem"
-            name="mensagem"
-            rows="4"
-            placeholder="Ex.: Solicito reserva para o periodo da manha."
-            required
-          ></textarea>
+</head>
 
-          <button type="submit">Enviar reserva</button>
-          <p class="feedback" id="feedback"></p>
-        </form>
+<body>
 
-        <section class="panel">
-          <div class="panel-header">
-            <h2>Reservas cadastradas</h2>
-            <button class="secondary" id="btn-atualizar" type="button">
-              Atualizar
-            </button>
-          </div>
-          <div class="lista" id="lista-reservas"></div>
-        </section>
-      </section>
-    </main>
+    <h1>
+        Reserva de Estacionamento
+    </h1>
 
-    <script src="/app.js"></script>
-  </body>
+    <input
+        id="nome"
+        placeholder="Nome">
+
+    <input
+        id="vaga"
+        placeholder="Vaga">
+
+    <button onclick="criarReserva()">
+        Reservar
+    </button>
+
+    <button onclick="listarReservas()">
+        Ver Reservas
+    </button>
+
+    <h2>
+        Reservas Cadastradas
+    </h2>
+
+    <ul id="lista"></ul>
+
+    <h2>
+        Reservas Processadas (Socket.IO)
+    </h2>
+
+    <ul id="processadas"></ul>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
 </html>

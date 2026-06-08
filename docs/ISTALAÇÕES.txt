@@ -1,0 +1,16 @@
+Comandos via CMD:
+
+Iniciar projeto com Node.js:
+npm init -y
+
+Express:
+npm install express
+
+Socket.io:
+npm install socket.io
+
+Rodar server:
+node server/app.js
+
+Porta:
+http://localhost:3000
