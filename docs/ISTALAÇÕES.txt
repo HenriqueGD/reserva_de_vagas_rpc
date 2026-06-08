@@ -10,7 +10,7 @@ Socket.io:
 npm install socket.io
 
 Rodar server:
-node server/app.js
+node server/app.js ou npm start
 
 Porta:
 http://localhost:3000

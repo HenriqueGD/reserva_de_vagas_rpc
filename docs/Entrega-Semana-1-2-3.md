@@ -88,7 +88,7 @@ Itens atendidos:
 * Atualização automática em tempo real utilizando Socket.IO.
 * Processamento posterior das reservas sem bloquear o usuário.
 
-## Como Demonstrar
+## Como Executar
 
 1. Executar:
 
@@ -132,7 +132,7 @@ Exemplo:
 
 ```json
 {
-  "nome": "Isabel",
+  "nome": "Natasha",
   "vaga": "1"
 }
 ```
