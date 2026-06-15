@@ -283,23 +283,3 @@ Exemplo:
   "nome": "Natasha",
   "vaga": "1"
 }
-
-## Requisitos Atendidos
-
-✔ Comunicação cliente-servidor
-✔ API REST
-✔ Método GET
-✔ Método POST
-✔ Comunicação síncrona
-✔ Comunicação assíncrona
-✔ Mensageria
-✔ Socket.IO
-✔ gRPC
-✔ Concorrência
-✔ Região crítica
-✔ Mutex
-✔ Mecanismo de sincronização
-
-## Observação
-Os dados permanecem armazenados apenas em memória durante a execução do servidor.
-Ao reiniciar a aplicação, as reservas são removidas, pois não há persistência em banco de dados.
