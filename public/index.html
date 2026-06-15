@@ -13,37 +13,47 @@
 
 <body>
 
-    <h1>
-        Reserva de Estacionamento
-    </h1>
+    <div class="container">
 
-    <input
-        id="nome"
-        placeholder="Nome">
+        <div class="formulario">
 
-    <input
-        id="vaga"
-        placeholder="Vaga">
+            <h1>
+                Reserva de Estacionamento
+            </h1>
 
-    <button onclick="criarReserva()">
-        Reservar
-    </button>
+            <input id="nome" placeholder="Nome">
 
-    <button onclick="listarReservas()">
-        Ver Reservas
-    </button>
+            <input id="vaga" type="number" min="1" placeholder="Número da vaga">
+            <button onclick="criarReserva()">
+                Reservar
+            </button>
+        </div>
 
-    <h2>
-        Reservas Cadastradas
-    </h2>
+        <div class="reservas">
 
-    <ul id="lista"></ul>
+            <h2>
+                Reservas Cadastradas
+            </h2>
 
-    <h2>
-        Reservas Processadas (Socket.IO)
-    </h2>
+            <div class="lista-reservas">
 
-    <ul id="processadas"></ul>
+                <ul id="lista"></ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="processadas">
+
+        <h2>
+            Reservas Processadas (Socket.IO)
+        </h2>
+
+        <ul id="processadas"></ul>
+
+    </div>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="script.js"></script>

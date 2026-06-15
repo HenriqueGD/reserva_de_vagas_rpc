@@ -14,3 +14,10 @@ node server/app.js ou npm start
 
 Porta:
 http://localhost:3000
+
+GRPC:
+npm install @grpc/grpc-js
+npm install @grpc/proto-loader
+
+MUTEX:
+npm install async-mutex

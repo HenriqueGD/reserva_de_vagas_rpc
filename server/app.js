@@ -3,6 +3,8 @@ const path = require('path');
 const http = require('http');
 const { Server } = require('socket.io');
 
+require('./grpc/grpcServer');
+
 const reservasRoutes = require('./routes/reservas');
 const fila = require('./services/fila');
 

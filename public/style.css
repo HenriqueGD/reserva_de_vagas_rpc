@@ -1,21 +1,196 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
 body {
 
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 
-    padding: 20px;
+    background-color: #f4f4f4;
+
+    padding: 30px;
+
+}
+
+.container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+
+}
+
+.formulario {
+
+    width: 35%;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.formulario h1 {
+
+    margin-bottom: 20px;
+
+    color: #333;
 
 }
 
 input {
 
-    display: block;
+    width: 100%;
 
-    margin: 10px 0;
+    padding: 12px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
 
 }
 
 button {
 
-    margin: 5px;
+    padding: 12px 18px;
 
+    margin-right: 10px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    background-color: #007bff;
+
+    color: white;
+
+}
+
+button:hover {
+
+    background-color: #0056b3;
+
+}
+
+.reservas {
+
+    width: 65%;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    height: 290px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.lista-reservas {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+}
+
+.reservas h2 {
+
+    margin-bottom: 15px;
+
+    color: #333;
+
+}
+
+.processadas {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.processadas h2 {
+
+    margin-bottom: 15px;
+
+    color: #333;
+
+}
+
+ul {
+
+    list-style: none;
+
+}
+
+li {
+
+    padding: 10px;
+
+    margin-bottom: 8px;
+
+    background: #f8f9fa;
+
+    border-left: 4px solid #007bff;
+
+    border-radius: 4px;
+
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+
+    .container {
+
+        flex-direction: column;
+
+    }
+
+    .formulario,
+    .reservas {
+
+        width: 100%;
+    }
+
+    button {
+
+        width: 100%;
+
+        margin-bottom: 10px;
+
+    }
 }

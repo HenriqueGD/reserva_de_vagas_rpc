@@ -19,6 +19,7 @@ socket.on('reservaProcessada', (reserva) => {
 });
 
 // CRIAR RESERVA
+
 async function criarReserva() {
 
     const nome =
@@ -29,44 +30,49 @@ async function criarReserva() {
 
     if (!nome || !vaga) {
 
-        alert('Preencha todos os campos');
+        alert(
+            'Preencha todos os campos'
+        );
 
         return;
 
     }
 
-    const resposta = await fetch('/reservas', {
+    const resposta =
+        await fetch('/reservas', {
 
-        method: 'POST',
+            method: 'POST',
 
-        headers: {
-            'Content-Type':
-                'application/json'
-        },
+            headers: {
+                'Content-Type':
+                    'application/json'
+            },
 
-        body: JSON.stringify({
-            nome,
-            vaga
-        })
+            body: JSON.stringify({
+                nome,
+                vaga
+            })
 
-    });
+        });
 
     const dados =
         await resposta.json();
 
     if (!resposta.ok) {
 
-        alert(dados.mensagem);
+        alert(
+            dados.mensagem
+        );
 
         return;
 
     }
 
-    alert('Reserva criada!');
-
     document.getElementById('nome').value = '';
 
     document.getElementById('vaga').value = '';
+
+    listarReservas();
 
 }
 
@@ -91,10 +97,17 @@ async function listarReservas() {
             <li>
                 ${reserva.nome}
                 -
-                ${reserva.vaga}
+                Vaga ${reserva.vaga}
             </li>
         `;
 
     });
 
 }
+
+//CARREGA AUTOMATICAMENTE LISTA DE RESERVAS
+window.onload = () => {
+
+    listarReservas();
+
+};

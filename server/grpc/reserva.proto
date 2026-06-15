@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+service ReservaService {
+
+  rpc ValidarReserva (ReservaRequest)
+  returns (ReservaResponse);
+
+}
+
+message ReservaRequest {
+
+  string nome = 1;
+
+  string vaga = 2;
+
+}
+
+message ReservaResponse {
+
+  bool sucesso = 1;
+
+  string mensagem = 2;
+
+}
